@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 flag = 1
-api = "AIzaSyAgno2ZBC2bSqON0kjvvgk34QKAbjAgsC4"
+api = "AIzaSyA-7ws8lDXiJWXU4GIW7wNaELeBu5Akb8o"
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 genai.configure(api_key=api)
@@ -85,4 +85,4 @@ def deleteLog():
     return(render_template("delete.html"))
 
 if __name__=="__main__":
-    app.run()
+    app.run(port=8080)
